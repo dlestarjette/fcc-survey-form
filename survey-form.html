@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<title>Solar System Travel Survey</title>
+	</head>
+	<body>
+		<h1 id="title">Solar System Travel Survey</h1>
+		<p id="description">Please take this short survey to help us understand your travel experience in our Solar System.</p>	
+		<form id="survey-form" method="post" action="#">
+			<!-- Name, email, age -->
+			<fieldset>
+				<!-- Name -->
+				<label id="name-label" for="name">Name:<input id="name" name="name" type="text" placeholder="Enter your name" required></label>
+				<!-- Email -->
+				<label id="email-label" for="email">Email address:<input id="email" name="email" type="email" placeholder="Enter your email address" required></label>
+				<!-- Number -->
+				<label id="number-label" for="number">How old are you?<input id="number" name="number" type="number" min="13" max="200" placeholder="Enter your age"></label>
+			</fieldset>	
+			<!-- Species, plant of residence -->
+			<fieldset>
+				<legend>What is your species?</legend>
+				<!-- Species radio buttons -->
+				<label for="species-human"><input id="species-human" type="radio" name="species-type" class="inline" value="human" checked> Human</label>
+				<label for="species-martian"><input id="species-martian" type="radio" name="species-type" class="inline" value="martian"> Martian</label>
+				<label for="species-other"><input id="species-other" type="radio" name="species-type" class="inline" value="other"> I am neither Human nor Martian</label>
+				<!-- Planet of residence dropdown -->
+				<label for="dropdown">What is your current planet of residence?
+					<select id="dropdown" name="residency">
+						<option value="">Please select...</option>
+						<option value="mercury">Mercury</option>
+						<option value="venus">Venus</option>
+						<option value="earth">Earth</option>
+						<option value="moon">The Moon</option>
+						<option value="mars">Mars</option>
+						<option value="jupiter">Jupiter</option>
+						<option value="saturn">Saturn</option>
+						<option value="uranus">Uranus</option>
+						<option value="neptune">Neptune</option>
+						<option value="pluto">Pluto</option>
+						<option value="other-planet">Other moon, asteroid, or dwarf planet</option>
+					</select>
+				</label>
+			</fieldset>
+			<!-- Visited planets, comments -->
+			<fieldset>
+				<!-- Visited planets -->
+				<legend>Please select all the planets in the Solar System you’ve visited:</legend>
+				<label for="visited-mercury"><input class="inline" id="visited-mercury" name="visited-planets" type="checkbox" value="mercury"> Mercury</label>
+				<label for="visited-venus"><input class="inline" id="visited-venus" name="visited-planets" type="checkbox" value="venus"> Venus</label>
+				<label for="visited-earth"><input class="inline" id="visited-earth" name="visited-planets" type="checkbox" value="earth"> Earth</label>
+				<label for="visited-earth-moon"><input class="inline" id="visited-earth-moon" name="visited-planets" type="checkbox" value="moon"> Earth’s moon</label>
+				<label for="visited-mars"><input class="inline" id="visited-mars" name="visited-planets" type="checkbox" value="mars"> Mars</label>
+				<label for="visited-martian-moons"><input class="inline" id="visited-martian-moons" name="visited-planets" value="martian-moons" type="checkbox"> Martian moons</label>
+				<label for="visited-jupiter"><input class="inline" id="visited-jupiter" name="visited-planets" type="checkbox" value="jupiter"> Jupiter</label>
+				<label for="visited-jovian-moons"><input class="inline" id="visited-jovian-moons" name="visited-planets" type="checkbox" value="jovian-moons"> Jovian moons</label>
+				<label for="visited-saturn"><input class="inline" id="visited-saturn" name="visited-planets" type="checkbox" value="saturn"> Saturn</label>
+				<label for="visited-saturnian-moons"><input class="inline" id="visited-saturnian-moons" name="visited-planets" type="checkbox" value="saturnian-moons"> Saturnian moons</label>
+				<label for="visited-uranus"><input class="inline" id="visited-uranus" name="visited-planets" type="checkbox" value="uranus"> Uranus</label>
+				<label for="visited-neptune"><input class="inline" id="visited-neptune" name="visited-planets" type="checkbox" value="neptune"> Neptune</label>
+				<label for="visited-pluto"><input class="inline" id="visited-pluto" name="visited-planets" type="checkbox" value="pluto"> Pluto</label>
+				<label for="visited-other"><input class="inline" id="visited-other" name="visited-planets" type="checkbox" value="other-moons-planets"> Other moons and/or dwarf planets</label>
+				<!-- Comments -->
+				<label for="comments">Please share any other comments about your travels in the Solar System:
+					<textarea id="comments" name="comments" rows="5" cols="45" placeholder="E.g. Europa is my favorite moon, because..."></textarea>
+				</label>
+			</fieldset>			
+			<!-- Form submission -->
+			<input id="submit" type="submit" value="Submit">
+		</form>
+	</body>
+</html>
